@@ -1,5 +1,6 @@
 import nltk
 from nltk.corpus import words
+import copy
 
 nltk.download('words')
 english_words = set(words.words())
@@ -10,7 +11,7 @@ lists = [
     ['w', 'p', 's'],
     ['r', 'h', 'l']
 ]
-scorelists = lists
+scorelists = copy.deepcopy(lists)
 
 def get_list_index(letter):
     for i, lst in enumerate(lists):
